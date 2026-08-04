@@ -1,4 +1,4 @@
-import { HitoHistorico } from './data/hitos';
+import type { HitoHistorico } from './data/hitos';
 
 export type GameMode = 'online' | 'pass_and_play';
 

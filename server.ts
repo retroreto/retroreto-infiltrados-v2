@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
-import { GameRoom, Player, RoomSettings, GamePhase, PlayerRole } from "./scr/types.js";
-import { getRandomHito, HITOS_DATASET, HitoHistorico } from "./src/data/hitos.js";
+import type { GameRoom, Player, RoomSettings, GamePhase, PlayerRole } from "./src/types";
+import { getRandomHito, HITOS_DATASET, type HitoHistorico } from "./src/data/hitos";
 
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
@@ -415,6 +415,7 @@ async function startServer() {
   } else {
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
+    app.use("/infiltrado", express.static(distPath));
     app.get("*", (req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
     });
