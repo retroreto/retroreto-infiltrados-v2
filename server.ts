@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
-import { GameRoom, Player, RoomSettings, GamePhase, PlayerRole } from "./src/types.js";
+import { GameRoom, Player, RoomSettings, GamePhase, PlayerRole } from "./types.js";
 import { getRandomHito, HITOS_DATASET, HitoHistorico } from "./src/data/hitos.js";
 
 const app = express();
