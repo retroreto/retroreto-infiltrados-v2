@@ -21,7 +21,7 @@ export const RetroRetoLogo: React.FC<RetroRetoLogoProps> = ({
 
   return (
     <div className={`flex flex-col items-center justify-center text-center select-none ${className}`}>
-      {/* Logo Main Image Row */}
+      {/* Logo Main Image */}
       <div className="flex items-center justify-center w-full py-1">
         <img
           src={logoInfiltradosSmall}
