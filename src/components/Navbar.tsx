@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Volume2, VolumeX, HelpCircle, Smartphone, Users, LogOut } from 'lucide-react';
 import { soundEngine } from '../utils/AudioService';
 import { GameMode } from '../types';
-import logoInfiltradosSmall from '../assets/images/logo-infiltrados-white-small.webp';
+import { RetroRetoLogo } from './RetroRetoLogo';
 
 interface NavbarProps {
   roomCode?: string;
@@ -22,21 +22,16 @@ export const Navbar: React.FC<NavbarProps> = ({ roomCode, mode, onOpenRules, onE
 
   return (
     <header className="w-full bg-[#0F131D]/90 backdrop-blur-xl border-b border-[#2B354C] sticky top-0 z-40 px-4 py-2.5 flex items-center justify-between shadow-md">
-      {/* Brand logo badge con tu logo pequeño actualizado */}
+      {/* Brand logo badge unificado */}
       <div 
         onClick={() => {
           soundEngine.playClick();
           if (onExitGame) onExitGame();
         }}
-        className="flex items-center gap-2 cursor-pointer group"
+        className="cursor-pointer group flex items-center"
         title="Volver / Salir"
       >
-        <img
-          src={logoInfiltradosSmall}
-          alt="RetroReto Infiltrados"
-          className="h-7 sm:h-8 object-contain drop-shadow-[0_0_10px_rgba(0,242,255,0.3)] group-hover:scale-105 transition-transform"
-          referrerPolicy="no-referrer"
-        />
+        <RetroRetoLogo size="sm" showSubtitle={false} className="scale-90 origin-left" />
       </div>
 
       {/* Room code / Mode status badge */}
