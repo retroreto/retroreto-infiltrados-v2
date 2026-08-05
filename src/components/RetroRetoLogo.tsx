@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import logoImg from '../assets/logo-infiltrados-white-small.webp';
 
-interface RetroRetoLogoProps {
-  className?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  showSubtitle?: boolean;
-}
+// Dentro de RetroRetoLogo:
+<img
+  src={logoImg}
+  alt="Infiltrados RetroReto Logo"
+  className={`object-contain shrink-0 max-w-full ${imgSizeClasses[size]}`}
+/>
 
 export const RetroRetoLogo: React.FC<RetroRetoLogoProps> = ({
   className = '',
