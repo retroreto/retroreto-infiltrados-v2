@@ -9,7 +9,7 @@ interface RetroRetoLogoProps {
 
 export const RetroRetoLogo: React.FC<RetroRetoLogoProps> = ({
   className = '',
-  size = 'md',
+  size = 'sm',
   showSubtitle = true
 }) => {
   const imageSizeClasses = {
