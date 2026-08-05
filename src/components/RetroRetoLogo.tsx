@@ -12,9 +12,8 @@ export const RetroRetoLogo: React.FC<RetroRetoLogoProps> = ({
   size = 'md',
   showSubtitle = true
 }) => {
-  // Tamaños adaptativos para la imagen según el prop recibido
   const imageSizeClasses = {
-    sm: 'max-h-7',
+    sm: 'h-7 sm:h-8',
     md: 'max-h-9 sm:max-h-10',
     lg: 'max-h-12 sm:max-h-14',
     xl: 'max-h-16 sm:max-h-20'
@@ -27,13 +26,13 @@ export const RetroRetoLogo: React.FC<RetroRetoLogoProps> = ({
         <img
           src={logoInfiltradosSmall}
           alt="RetroReto Infiltrados en el Tiempo"
-          className={`w-full object-contain drop-shadow-[0_0_20px_rgba(0,242,255,0.4)] transition-transform duration-300 ${imageSizeClasses[size]}`}
+          className={`w-auto object-contain drop-shadow-[0_0_15px_rgba(0,242,255,0.4)] transition-transform duration-300 ${imageSizeClasses[size]}`}
           referrerPolicy="no-referrer"
         />
       </div>
 
       {/* Subtitle / Tagline opcional */}
-      {showSubtitle && (
+      {showSubtitle && size !== 'sm' && (
         <div className="mt-2 flex items-center justify-center gap-2">
           <div className="h-[1px] w-6 sm:w-10 bg-gradient-to-r from-transparent to-[#00F0FF]/60" />
           <span className="text-[10px] sm:text-xs font-black tracking-[0.28em] text-[#00F0FF] uppercase drop-shadow-[0_0_8px_rgba(0,240,255,0.4)]">
