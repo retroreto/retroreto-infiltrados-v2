@@ -12,46 +12,54 @@ export const RetroRetoLogo: React.FC<RetroRetoLogoProps> = ({
   size = 'md',
   showSubtitle = true
 }) => {
+  // Si el Navbar pide tamaño 'sm', renderizamos directamente la imagen oficial .webp optimizada para la barra
+  if (size === 'sm') {
+    return (
+      <div className={`flex items-center select-none ${className}`}>
+        <img
+          src={logoInfiltradosSmall}
+          alt="RetroReto Logo"
+          className="h-7 sm:h-8 w-auto object-contain drop-shadow-[0_0_10px_rgba(0,240,255,0.4)]"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+    );
+  }
+
+  // Para los tamaños grandes (md, lg, xl) mantenemos la estructura original con texto y subtítulo
   const sizeClasses = {
-    sm: 'text-xl',
     md: 'text-2xl sm:text-3xl',
     lg: 'text-3xl sm:text-4xl',
     xl: 'text-4xl sm:text-5xl'
   };
 
-  const imageSizes = {
-    sm: 'h-6 sm:h-7',
-    md: 'h-8 sm:h-10',
-    lg: 'h-10 sm:h-12',
-    xl: 'h-12 sm:h-16'
+  const helmetSizes = {
+    md: 'w-8 h-8 sm:w-10 sm:h-10',
+    lg: 'w-10 h-10 sm:w-12 sm:h-12',
+    xl: 'w-12 h-12 sm:w-16 sm:h-16'
   };
 
   return (
     <div className={`flex flex-col items-center justify-center text-center select-none ${className}`}>
-      {/* Logo Main Row */}
       <div className={`flex items-center justify-center gap-1.5 sm:gap-2 font-black tracking-tight uppercase leading-none ${sizeClasses[size]}`}>
-        {/* RETRO */}
         <span className="text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
           RETRO
         </span>
 
-        {/* Imagen Oficial Integrada en el centro */}
-        <div className={`relative inline-flex items-center justify-center shrink-0 ${imageSizes[size]}`}>
+        <div className={`relative inline-flex items-center justify-center shrink-0 ${helmetSizes[size]}`}>
           <img
             src={logoInfiltradosSmall}
             alt="RetroReto Logo"
-            className="w-auto h-full object-contain drop-shadow-[0_0_12px_rgba(0,240,255,0.6)]"
+            className="w-full h-full object-contain drop-shadow-[0_0_12px_rgba(0,240,255,0.6)]"
             referrerPolicy="no-referrer"
           />
         </div>
 
-        {/* RETO */}
         <span className="text-[#E52E2E] drop-shadow-[0_0_15px_rgba(229,46,46,0.6)]">
           RETO
         </span>
       </div>
 
-      {/* Subtitle / Tagline */}
       {showSubtitle && (
         <div className="mt-1.5 flex items-center justify-center gap-2">
           <div className="h-[1px] w-6 sm:w-10 bg-gradient-to-r from-transparent to-[#00F0FF]/60" />
