@@ -199,3 +199,6 @@ export const DiscussionView: React.FC<DiscussionViewProps> = ({
     </div>
   );
 };
+
+export default DiscussionView;
+

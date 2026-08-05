@@ -217,3 +217,6 @@ export const RoleRevealView: React.FC<RoleRevealViewProps> = ({
     </div>
   );
 };
+
+export default RoleRevealView;
+

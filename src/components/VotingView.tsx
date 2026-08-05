@@ -183,3 +183,6 @@ export const VotingView: React.FC<VotingViewProps> = ({
     </div>
   );
 };
+
+export default VotingView;
+

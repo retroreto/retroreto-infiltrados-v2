@@ -106,3 +106,6 @@ export const AvatarPicker: React.FC<AvatarPickerProps> = ({
     </div>
   );
 };
+
+export default AvatarPicker;
+

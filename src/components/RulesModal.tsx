@@ -102,3 +102,6 @@ export const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
+
+export default RulesModal;
+

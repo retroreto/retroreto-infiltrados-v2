@@ -192,3 +192,6 @@ export const EjectionView: React.FC<EjectionViewProps> = ({
     </div>
   );
 };
+
+export default EjectionView;
+

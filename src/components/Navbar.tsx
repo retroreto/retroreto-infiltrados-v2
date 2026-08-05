@@ -78,3 +78,6 @@ export const Navbar: React.FC<NavbarProps> = ({ roomCode, mode, onOpenRules, onE
     </header>
   );
 };
+
+export default Navbar;
+

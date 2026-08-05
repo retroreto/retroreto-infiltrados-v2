@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Rocket, Users, Smartphone, Sparkles, Play, ShieldAlert, ArrowRight, Radio, Shield, Terminal } from 'lucide-react';
 import { AvatarPicker } from './AvatarPicker';
-import { RetroRetoLogo } from '../assets/logo-infiltrados-white-small.png';
+import { RetroRetoLogo } from './RetroRetoLogo';
 import { soundEngine } from '../utils/AudioService';
 import agentHeroImg from '../assets/images/retroreto_agent_1785541053831.jpg';
 
@@ -248,3 +248,5 @@ export const HomeView: React.FC<HomeViewProps> = ({
     </div>
   );
 };
+
+export default HomeView;

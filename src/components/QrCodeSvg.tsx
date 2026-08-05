@@ -84,3 +84,6 @@ export const QrCodeSvg: React.FC<QrCodeProps> = ({ value, size = 160 }) => {
     </div>
   );
 };
+
+export default QrCodeSvg;
+

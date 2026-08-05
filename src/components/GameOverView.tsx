@@ -182,3 +182,6 @@ export const GameOverView: React.FC<GameOverViewProps> = ({
     </div>
   );
 };
+
+export default GameOverView;
+
